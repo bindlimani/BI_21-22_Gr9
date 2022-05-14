@@ -1,0 +1,166 @@
+@import url(main.css);
+
+.team-part-content {
+    width: 1000px;
+    margin: 2rem 0 2rem 0;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+
+ .map-part-content {
+    width: 970px;
+    margin: 2rem 0 2rem 0;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+.column {
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+   padding: 0 16px;
+}
+
+
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+#team-photo {
+    height: 250px;
+}
+
+.card {
+    height: 450px;
+}
+
+.features_pic1, .features_pic2, .features_pic3{
+ background-image: url("../images/features/landing-feature-01.jpg");
+ background-repeat: no-repeat; 
+ background-position: center;
+ background-attachment: scroll;
+ background-origin: border-box;
+ background-size: cover;
+
+}
+
+
+.features_pic3 {
+    background-image: url("../images/features/landing-feature-03.jpg");
+}
+
+
+.features_pic4 {
+    background-image: url("../images/features/landing-feature-04.jpg");
+}
+
+
+.features_pic5 {
+    background-image: url("../images/features/landing-feature-05.jpg");
+}
+
+
+.features_pic6 {
+    background-image: url("../images/features/landing-feature-06.jpg");
+}
+
+
+
+.card h2 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.card p {
+
+    text-align: center;
+    padding: 1rem;
+}
+
+#card1:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#card2:hover {
+    transform: translateY(-10px);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#card3:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+#card4:hover {
+    cursor: pointer;
+    transform: skew(.05rad);
+    transition: 0.5s;
+}
+
+#card5:hover {
+    cursor: pointer;
+    transform: rotateX(3.142rad);
+    transition: 0.5s;
+}
+
+#card6:hover {
+    cursor: pointer;
+    transform: rotateY(3.142rad);
+    transition: 0.5s;
+}
+
+
+#first-part-testimonial {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
