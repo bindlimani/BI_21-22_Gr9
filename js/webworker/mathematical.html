@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All other functions</title>
+    <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .child {
+            border: 1px solid black;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem   ;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Description</h1>
+    <p>In this file i jave implemented some JS functions that was impossible to find a way to implement in the project that we have designed 
+        to build for. If you open the console you can find all the results that should be realized
+    </p>
+
+      <div class="parent">
+          <div class="child">
+                   <h2>Calculate area of circle radius as parameter</h2>
+                   <input type="number" name="radius" id="radius">
+                   <button id="circleradiusBtn">CALCULATE</button>
+                   <p id="result">Rezultati</p>
+          </div>
+
+          <div class="child">
+                <h2>Calculate compound interest</h2>
+                <input type="number" name="radius" id="amount" placeholder="Enter amount">
+                <input type="number" name="" id="interest" placeholder="Enter Interes rate">
+                <input type="number" name="" id="period" placeholder="Period of time in years">
+                <button id="interesBtn">CALCULATE</button>
+                <p id="result2">Rezultati</p>
+          </div>
+
+          <div class="child">
+            <h2>Get the LN2 value</h2>
+            <button id="getln2">Print LN2 value</button>
+            <p id="result3">Rezultati</p>
+         </div>
+
+
+         <div class="child">
+            <h2>Math.LOG10Ee</h2>
+            <button id="getln10e">Math.LOG10Ee</button>
+            <p id="result4">Rezultati</p>
+         </div>
+
+
+
+         <div class="child">
+            <h2>Replacing strings</h2>
+            <button id="replaceBtn">Replace</button>
+            <p id="result5">gentrit.hoxha@student.uni-pr.edu</p>
+         </div> 
+
+
+         <div class="child">
+            <h2>JavaScript try catch</h2>
+            <p>Please input a number between 10 and 100:</p>
+            
+            <input id="tryCatchValue" type="text">
+            <button type="button" id="tryCatchButton">Test Input</button>
+
+            <p id="tryCatchMessage"></p>
+         </div>
+
+         
+         <div class="child">
+            <p>Count numbers: <output id="workerResult"></output></p>
+            <button onclick="startWorker()">Start Worker</button>
+            <button onclick="stopWorker()">Stop Worker</button>
+         </div>
+
+      </div>
+
+
+        <script src="../allOtherJsThings.js"></script>
+        <script src="webworker.js"></script>
+
+
+</body>
+</html>

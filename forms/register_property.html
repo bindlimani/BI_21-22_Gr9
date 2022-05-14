@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Register a Property</title>
+</head>
+<body>
+    <div id="main">
+        <div id="sub-main">                
+                <form id="register-property" autocomplete="on" form >
+                    
+                    <div class="survey-content" style="margin-top: 5rem;">
+                        <h1 class="login-title" id="title" style="padding-bottom: 0rem !important;">Register A property</h1>
+                        
+                        <label id="name-label" for="name"><b>Name of Owner:</b></label>
+                        <input type="text" id="name" name="full Name" placeholder="Enter your full Name" autofocus formmethod="get">
+                        <small id="small1" class="no">Message Error for the Name</small> 
+
+                        <label id="adress-label" for="address"><b>Adress:</b></label>
+                        <input type="text" id="address" name="address" placeholder="Enter the address" >
+                        <small id="small1" class="no">Message Error for the Address</small> 
+                        
+                        <label id="state-label" for="state"><b>State:</b></label>
+                        <select name="state" id="state" >
+                                <option  disabled selected>Choose The State</option>
+                                <optgroup label="USA">
+                                    <option value="Las-Vegas">Las Vegas</option>
+                                    <option value="new-york">New York</option>
+                                    <option value="washington">Washinton D.C</option>
+                                </optgroup>
+
+                                <optgroup label="Switerland">
+                                    <option value="zurich">Zurich</option>
+                                    <option value="basel">Basel</option>
+                                    <option value="luzern">Luzern</option>
+                                    <option value="geneva">Geneva</option>
+                            </optgroup>
+                        </select>
+
+
+                        <label>Choose the category
+                            <datalist id="category">
+                                <option  disabled selected>Choose The category</option>
+                                <option value="House 1For Sale">House for Sale</option>
+                                <option value="House For Rent">House for Rent</option>
+                                <option value="Apartment For Sale">Apartment for Sale</option>
+                                <option value="Apartment For Rent">Apartment for Rent</option>
+                            </datalist>
+                            If other, please specify:
+                              <input type="text" name="category" list="category">
+                            </label>
+                        
+                        
+                        <label for="no-rooms"><b>Number of Rooms:</b></label>
+                        <input type="number" name="no-rooms" min="1" max="40" id="no-rooms" placeholder="Enter the number of rooms..">
+                        <small id="small1" class="no">Message Error for the Rooms</small> 
+
+                        <label for="no-bath-rooms"><b>Number of Bath Rooms:</b></label>
+                        <input type="text" name="no-bath-rooms" min="1" max="10" id="no-bath-rooms" placeholder="Enter the number of bath rooms..">
+                        <small id="small1" class="no">Message Error for the BathRooms</small> 
+
+                        <label for="sq-foot"><b>Square Foot of the property:</b></label>
+                        <input type="number" name="sq-foot"  id="sq-foot" placeholder="Enter the square foot of the property..">
+                        <small id="small1" class="no">Message Error for the Sq Foot</small> 
+
+                        <label for="photos"><b>Attach Some photos</b></label>
+                        <input type="file" name="photos"  id="photos">
+
+                        <label for="main-color-house">Main color in House/Apartment</label>
+                        <input type="color" name="color-house" id="main-color-house">
+
+                        <label id="message-label" for="description"><b>Description :</b></label>
+                        <textarea name="message" id="description" cols="30" rows="10" placeholder="Please enter any specific information that is related with the property ......"></textarea>
+                        <small id="small1" class="no">Message Error for the Sq Foot</small>                       
+                
+                        <input type="submit" id="submit" value="Register the Property" name="register-property">
+                </div>
+
+                </form>
+                
+                
+                <p id="footer"><b><em>Copyright &copy; PWWW21-22-GR12 2021 / 2022</em></b></p>
+
+      </div>
+
+ </div>
+     
+
+ <script src="../js/registerPropertyValidation.js"></script>
+</body>
+</html>

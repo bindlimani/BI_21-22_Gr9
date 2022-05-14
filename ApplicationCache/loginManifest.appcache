@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# 2021-12-25 v1.0.0
+/login.css
+/loginValidation.js
+
+NETWORK:
+*
+
+FALLBACK:
+/html/ /login.html  

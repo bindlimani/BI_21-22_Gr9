@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sing Up Page</title>
+</head>
+<body>
+    <div id="main">
+        <div id="sub-main">                
+                <form  id="sign-up-form" autocomplete="on">
+                    
+                    <div class="survey-content" style="margin-top: 5rem;">
+                        <h1 class="login-title" id="title">Sign up Into the System </h1>
+                        
+                        <label id="name-label" for="firstName"><b>Name:</b></label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your Name" >
+                        <small id="small1" class="no">Message Error for the Username</small> 
+
+
+                        <!--Username instead of surname for naming things not anything-->
+                        <label id="surname-label" for="surname"><b>Username:</b></label>
+                        <input type="text" id="surname" name="lastName" placeholder="Enter your Username" >  
+                        <small id="small1" class="no">Message Error for the Username</small>     
+                        
+                        
+                        <label id="surname-label" for="surname"><b>Gender:</b></label> <br>
+
+                        <input type="radio" name="gender" id="gender-male" value="Male" required/>                 
+                        <label for="gender-male"> Male</label> <br>
+
+                        <input type="radio" name="gender" id="gender-female" value="Female" required/>                 
+                        <label for="gender-female"> Female</label> 
+                        <small id="small1" class="no">Message Error for the Username</small> 
+
+ <br> <br>
+
+
+
+
+
+
+                        <label id="email-label" for="signUpemail"><b>Email:</b></label>
+                        <input type="text[[" id="signUpemail" name="email" placeholder="Enter a valid mail:"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> 
+                        <small id="small1" class="no">Message Error for the Username</small> 
+                    
+                        <label id="pasword-label1" for="signUpPassword1">Password:</label><br>
+                        <input type="password" id="signUpPassword1" name="password1" placeholder="Enter the password... " > 
+                        <small id="small1" class="no">Message Error for the Username</small> 
+
+                        <label id="pasword-label2" for="signUpPassword2">Repeat Password:</label><br>
+                        <input type="password" id="signUpPassword2" name="password2" placeholder="Repeat Password... " > 
+                        <small id="small1" class="no">Message Error for the Username</small> 
+
+
+                        <input type="checkbox" name="remember-me" id="agree-terms" value="agree_terms_and_conitions" />  
+                        <small id="small1" class="no" style="margin-top: 0.4rem !important;">Message Error for the Username</small>                
+                        
+                        <label for="remember-me"> Remember Me</label> <br>
+                        <p style="margin: 1rem 0 1rem 0;">By creating an account you agree to our Terms & Privacy. </p>
+                
+                        <input type="submit" id="submit" name="sign-up" value="SIGN UP">
+                </div>
+
+                </form>
+                    
+                
+                <p id="footer"><b><em>Copyright &copy; PWWW21-22-GR12 2021 / 2022</em></b></p>
+
+      </div>
+
+ </div>
+     
+ <script src="../js/signupValidation.js"></script>
+</body>
+</html>

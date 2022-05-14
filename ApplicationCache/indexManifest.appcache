@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# 2021-12-25 v1.0.0
+/main.css
+/time.js
+
+
+
+NETWORK:
+*
+
+FALLBACK:
+/html/ /index.html

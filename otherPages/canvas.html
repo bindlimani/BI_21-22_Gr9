@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+    <style>
+        button {
+            position: absolute;
+            top: 18rem;
+            border: none;
+            background-color: cadetblue;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            right: 8rem;
+            cursor: pointer;
+        }
+        </style>    
+        
+</head>
+<body>
+    
+    
+    <h1>Canvas Examples</h1>
+    <button id="butoni" onclick="myCanvas()">Paste the the Image to the next div</button>
+    
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        The browser doesn't support HTML canvas tag.
+    </canvas>
+    
+    <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000000;">
+        The browser doesn't support HTML canvas tag.
+    </canvas>
+    
+    <canvas id="myCanvas3" width="400" height="100" style="border:1px solid #000000;">
+        The browser doesn't support HTML canvas tag.
+    </canvas>
+    
+    <canvas id="myCanvas4" width="400" height="100" style="border:1px solid #000000;">
+        The browser doesn't support HTML canvas tag.
+    </canvas>
+    
+    <canvas id="myCanvas5" width="300" height="250" style="border:1px solid #000000;">
+        The browser doesn't support HTML canvas tag.
+    </canvas>
+
+    <canvas id="myCanvas6" width="300" height="250" style="border:1px solid #000000;">
+        The browser doesn't support HTML canvas tag.
+    </canvas>
+
+    <img id="house" src="../images/house1.jpg" alt="" width="400" height="280">
+    
+    <canvas id="myCanvas7" width="1200" height="840" style="border:1px solid black;">
+
+
+        
+        
+        
+        <h1>SVG Examples</h1>
+        
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0,0);
+            ctx.lineTo(200,100);
+            ctx.stroke();
+
+
+            var c2 = document.getElementById("myCanvas2");
+            var ctx2 = c2.getContext("2d");
+            ctx2.beginPath();
+            ctx2.arc(90,50,40,0,2*Math.PI);
+            ctx2.stroke();
+
+
+            var c3 = document.getElementById("myCanvas3");
+            var ctx3 = c3.getContext("2d");
+            ctx3.font = "30px Arial";
+            ctx3.fillText("PWWW21-22_GR12", 60 , 60);
+
+
+            var c4 = document.getElementById("myCanvas4");
+            var ctx4 = c4.getContext("2d");
+            ctx4.font = "30px Arial";
+            ctx4.strokeText("Stroke Text", 120 , 60);
+
+  
+
+
+            var c5 = document.getElementById("myCanvas5");
+            var ctx5 = c5.getContext("2d");
+            // Create gradient
+            var grd = ctx5.createLinearGradient(0, 0, 200, 0);
+            grd.addColorStop(0, "red");
+            grd.addColorStop(1, "white");
+            // Fill with gradient
+            ctx5.fillStyle = grd;
+            ctx5.fillRect(10, 10, 500, 200);
+
+
+
+            var c6 = document.getElementById("myCanvas6");
+            var ctx6 = c6.getContext("2d");
+            // Create gradient
+            var grd1 = ctx6.createRadialGradient(75, 50, 5, 90, 60, 100);
+            grd1.addColorStop(0, "blue");
+            grd1.addColorStop(1, "white");
+            // Fill with gradient
+            ctx6.fillStyle = grd1;
+            ctx6.fillRect(10, 10, 500, 200);
+
+           
+            function myCanvas() {
+
+                var c7 = document.getElementById("myCanvas7");
+                var ctx7 = c7.getContext("2d");
+                var img = document.getElementById("house");
+                ctx7.drawImage(img,20,20);
+
+                }
+
+
+                var button = document.getElementById('butoni');
+                button.addEventListener('click', myCanvas);
+       </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage </title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        table {
+            width: 50%;
+        }
+
+        table,tr,td,th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        p,input {
+            margin-left: 1rem;
+        }
+        
+        input {
+            width: 300px;
+            height: 20px;
+        }
+
+        button{
+            margin: 0.5rem;
+            width: 60%;
+        }
+
+        #clearButton {
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+
+
+    <table>
+        <tr>
+            <th colspan="2" style="text-align: center;">Enter the Data</th>
+        </tr>
+
+        <form id="carForm">
+            <tr>
+                <td><p>Enter the Address</p></td>
+                <td><input type="text" id="addressValue" placeholder="Enter the address" required></td>
+                
+            </tr>
+    
+            <tr>
+                <td><p>Enter the Price</p></td>
+                <td><input type="text" id="addressPrice" placeholder="Enter the Price" required></td>
+            </tr>
+    
+
+            <tr>
+                <td><p>Enter datetime when builded</p></td>
+                <td><input type="datetime-local" id="datetime-local" required></td>
+            </tr>
+
+            <tr>
+                <td><p>Enter the URL<p></td>
+                <td><input type="url" id="urll" required ></td>
+            </tr>
+
+
+            
+            <tr>
+                <td><p>Enter the Key</p></td>
+                <td><input type="text" id="key" placeholder="Enter the key" required ></td>
+            </tr>
+    
+            <tr>
+                <th colspan="2"><button  type="submit" id="submit">Store records</button></th>
+            </tr>
+        </form>
+
+
+        <tr>
+            <td colspan="2" style="height: 40px
+            ;"></td>
+            
+        </tr>
+
+
+        <tr>
+            <td><p>Enter key to retrieve item</p></td>
+            <td><input type="text" id="retrieveKey" placeholder="retrieveKey" required> </td>
+            
+        </tr>
+
+
+
+        <tr>
+            <th colspan="2"><button id="retrieveButton">Retrieve records</button></th>
+        </tr>
+
+
+
+    </table>
+
+    <td rowspan="10"><button id="clearButton">Clear all records</button></td>
+
+        <div id="retrieve"></div>
+
+
+    <script>
+
+function store(){ //stores items in the session storage
+    var address = document.getElementById('addressValue').value;
+    var price = document.getElementById('addressPrice').value;
+    var key = document.getElementById('key').value;
+    var date = document.getElementById('datetime-local').value;
+    var url = document.getElementById('urll').value;
+
+    const house = {
+        name: address,
+        price: price,
+        date: date,
+        url:  url
+    }
+
+    window.sessionStorage.setItem(key,JSON.stringify(house));  
+    //converting object to string
+}
+
+function retrieveRecords(){
+    var key = document.getElementById('retrieveKey').value; //gets key from user
+    console.log("retrive records");
+
+    var records = window.sessionStorage.getItem(key); //searches for the key in sessionStorage
+    var paragraph = document.createElement("p");
+    var infor = document.createTextNode(records);
+    paragraph.appendChild(infor);
+    var element = document.getElementById("retrieve");
+    element.appendChild(paragraph);
+}
+
+function removeItem(){ //deletes item from localStorage
+    var key = document.getElementById('removeKey').value; //gets key from user
+    localStorage.removeItem(key) //passes key to the removeItem method
+    console.log("remove items");
+}
+
+
+function clearStorage(){ //clears the entire Session Storage
+    sessionStorage.clear()
+    console.log("clear records");
+}
+
+window.onload = function(){ //ensures the page is loaded before functions are executed.
+    document.getElementById("carForm").onsubmit = store
+    document.getElementById("clearButton").onclick = clearStorage
+    //document.getElementById("removeButton").onclick = removeItem
+    document.getElementById("retrieveButton").onclick = retrieveRecords
+}
+
+
+
+
+        // const dataForProject = {
+        //     "authors": ["Gentrit Hoxha", "Zenit Neziri","Jetmir Halili"],
+        //     "nameOfSubject": "Programming in WWWW",
+        //     "group": 19,
+
+        // }
+
+        //  localStorage.setItem("dataForTheProject", JSON.stringify(dataForProject));
+
+    </script>
+</body>
+</html>

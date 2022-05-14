@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<link rel="shortcut icon" href="#" type="image/x-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		.container{
+			width: 600px;
+			height: 500px;
+			background: #eee;
+			overflow: hidden;
+			position: relative;
+			margin: auto;
+		}
+		.car{
+			width: 200px;
+			height: 100px;
+			background: url('car.png') no-repeat center;
+			background-size: cover;
+			position: absolute;
+			transition: all 0.1s;
+		}
+
+		#carImg{
+			position: relative;
+			top: 400px;
+			left: 500px !important;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="flag.png" width="100" id="carImg" alt="">
+		<div class="car"></div>
+	</div>
+
+	<script type="text/javascript">
+		var x_axis = 0,
+			y_axis = 0;
+
+		document.onkeydown = check_key;
+
+		function check_key(e){
+			e = e || window.event;
+
+			if(e.keyCode == '38'){
+				mov_car("up");
+
+
+				var p = $('.car');
+				var position = p.position();
+                  if ((position.left)>340 && (position.top)>220) {
+					  window.alert("You have reached the goal");
+				  }
+
+				console.log(`Position left ${(position.left)}, top: ${position.top}`);
+
+			}else if(e.keyCode == '40'){
+				mov_car("down");
+				var p = $('.car');
+				var position = p.position();
+				if ((position.left)>340 && (position.top)>220) {
+					  window.alert("You have reached the goal");
+				  }
+
+				console.log(`Position left ${position.left}, top: ${position.top}`);
+			}else if(e.keyCode == '37'){
+				mov_car("left");
+				var p = $('.car');
+				var position = p.position();
+				
+				if ((position.left)>340 && (position.top)>220) {
+					  window.alert("You have reached the goal");
+
+				  }
+				console.log(`Position left ${position.left}, top: ${position.top}`);
+				
+			}else if(e.keyCode == '39'){
+				mov_car("right");
+				var p = $('.car');
+				var position = p.position();
+				if ((position.left)>340 && (position.top)>220) {
+					$("body").css("background-color","green");
+					  window.alert("You have reached the goal");
+				  }
+
+				console.log(`Position left ${position.left}, top: ${position.top}`);
+			}
+		}
+
+		function mov_car(a){
+			if(a == 'right'){
+				x_axis = x_axis + 10;
+				$(".car").css({"transform":"translate("+x_axis+"px,"+y_axis+"px)  rotate(0deg)"});
+			}
+			
+			
+			else if(a == 'left'){
+				x_axis = x_axis - 10;
+				$(".car").css({"transform":"translate("+x_axis+"px,"+y_axis+"px) rotate(180deg)"});
+			}else if(a == 'up'){
+				y_axis = y_axis - 10;
+				$(".car").css({"transform":"translate("+x_axis+"px,"+y_axis+"px)rotate(270deg)"});
+			}else if(a == 'down'){
+				y_axis = y_axis + 10;
+				$(".car").css({"transform":"translate("+x_axis+"px,"+y_axis+"px) rotate(90deg)"});
+			}
+		}
+	</script>
+</body>
+</html>

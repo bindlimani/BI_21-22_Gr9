@@ -1,0 +1,15 @@
+@import url(login.css);
+
+#sub-main {
+        
+}
+
+#main {
+    
+    height: fit-content;
+}
+
+#description{
+    color: black !important;
+    text-align: left;
+}
