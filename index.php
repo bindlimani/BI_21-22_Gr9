@@ -115,7 +115,41 @@
 
                           <a href="otherPages/game/game.html" target="_blank">  <li>GAME</li></a>
                 </div>
+                <div style="padding: 20px 0px 0px 0px">
+                    <h1 style="text-align: center;">
+                    
+                    <?php
+                        $hours = date("H");
+                        $message = "";
+                        if($hours > 5 and $hours <= 12)
+                        {
+                            $message = "Good morning!";
+                        }
+                        elseif($hours > 12 and $hours <= 18)
+                        {
+                            $message = "Good afternoon!";
+                        }
+                        else
+                        {
+                            $message = "Good evening!";
+                        }
+                        echo $message;
 
+                        //Definimi i variablave globale
+                        define("propertyType",["Apartment","House"]);
+                        echo "<br/>We have " . propertyType[0] . " and " . propertyType[1] . " available for rent";
+                        
+                        function incrementView()
+                        {
+                            static $visits = 1;
+                            echo "<br/>$visits";
+                            $visits++;
+                        }
+                        incrementView();
+                        incrementView();
+                    ?>
+                    </h1>
+                </div>
 
 </div>
 

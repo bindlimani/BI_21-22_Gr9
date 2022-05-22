@@ -173,6 +173,3 @@ function setSuccessFor(input, message) {
      small.textContent = message;
      small.className = 'successMsg yes';
 }
-
-
-console.log(133)

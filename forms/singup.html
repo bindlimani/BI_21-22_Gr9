@@ -8,24 +8,28 @@
     <title>Sing Up Page</title>
 </head>
 <body>
+    <script src="../js/signupValidation.js"></script>
     <div id="main">
         <div id="sub-main">                
-                <form  id="sign-up-form" autocomplete="on">
+                <form  id="sign-up-form" autocomplete="on" action="register.php" method="post">
                     
                     <div class="survey-content" style="margin-top: 5rem;">
                         <h1 class="login-title" id="title">Sign up Into the System </h1>
                         
                         <label id="name-label" for="firstName"><b>Name:</b></label>
-                        <input type="text" id="firstName" name="firstName" placeholder="Enter your Name" >
+                        <input type="text" id="name" name="name" placeholder="Enter your Name" >
                         <small id="small1" class="no">Message Error for the Username</small> 
 
-
+                        
                         <!--Username instead of surname for naming things not anything-->
                         <label id="surname-label" for="surname"><b>Username:</b></label>
-                        <input type="text" id="surname" name="lastName" placeholder="Enter your Username" >  
+                        <input type="text" id="username" name="username" placeholder="Enter your Username" >  
                         <small id="small1" class="no">Message Error for the Username</small>     
                         
-                        
+                        <label id="surname-label" for="surname"><b>Age:</b></label>
+                        <input type="number" id="age" name="age" placeholder="Age" min="1" max="180" >  
+                        <small id="small1" class="no">Message Error for the Username</small>  
+
                         <label id="surname-label" for="surname"><b>Gender:</b></label> <br>
 
                         <input type="radio" name="gender" id="gender-male" value="Male" required/>                 
@@ -70,9 +74,7 @@
                 <p id="footer"><b><em>Copyright &copy; PWWW21-22-GR12 2021 / 2022</em></b></p>
 
       </div>
-
+      
  </div>
-     
- <script src="../js/signupValidation.js"></script>
 </body>
 </html>
