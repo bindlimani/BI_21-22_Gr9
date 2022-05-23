@@ -10,10 +10,10 @@
 <body>
     <div id="main">
         <div id="sub-main">                
-                <form  id="login-form" autocomplete="on">
+                <form  id="login-form" action="login.php" method="post" autocomplete="on">
                     
                     <div class="survey-content">
-                        <h1 class="login-title" id="title">Login Into the System </h1>
+                        <h1 class="login-title" action="" id="title">Login Into the System </h1>
                         
                         <label id="name-label" for="login-username"><b>Username or Email:</b></label>
                         <input type="email" id="login-username" name="email" placeholder="Enter your Mail">
@@ -23,7 +23,7 @@
                         <label id="pasword-label" for="login-password"><b>Password:</b></label><br>
                         <input type="password" id="login-password" name="password" placeholder="Enter your password" > 
                         <small id="small1" class="no" >Message Error for the Password field</small>
-                    
+
                         <input type="submit" id="submit" name="login" value="LOGIN">
                 </div>
 
@@ -35,7 +35,5 @@
       </div>
 
  </div>
-     
- <script src="../js/loginValidation.js"></script>
 </body>
 </html>

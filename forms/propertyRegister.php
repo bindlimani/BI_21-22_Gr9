@@ -167,8 +167,6 @@
             
     
             if ($conn->query($sql) === TRUE) {
-            global $last_id;
-            $last_id = $conn->insert_id;
     
             echo "New record created successfully. Last inserted ID is: " . $last_id;
             } else {
@@ -210,8 +208,6 @@
             
     
             if ($conn->query($sql) === TRUE) {
-            global $last_id;
-            $last_id = $conn->insert_id;
     
             echo "New record created successfully. Last inserted ID is: " . $last_id;
             } else {
@@ -219,5 +215,45 @@
             }
         }
     ?>
+<?php
+    #Ngarkimi i fajllit(leximi i fajllit)
+    $uploadCriteria = TRUE;
+    $uploadError = "";
+    if(isset($_POST["submit"])) {
+        print_r($_FILES);
+        $file_name = $last_id . $_FILES["file"]["name"];//Me cookie user id
+        $file_type = $_FILES["file"]["type"];
+        $file_size = $_FILES["file"]["size"];
+        $file_temp_loc = $_FILES["file"]["tmp_name"];
+        $file_store = "uploads/" . $file_name;
+        $maxFileSize = 10000000;
+        if($file_size > $maxFileSize)
+        {
+            $uploadCriteria = FALSE;
+            $uploadError .= "Your file is too big. Please attach a file smaller than 10MB";
+        }
+        if($file_type !== "image/jpeg" AND $file_type !== "application/pdf")
+        {
+            $uploadCriteria = FALSE;
+            $uploadError .= "Your file is not an image or pdf. Please upload an image or pdf.";
+        }
+
+        move_uploaded_file($file_temp_loc, $file_store);
+    }
+?>
+<?php
+    #Shkrimi ne fajll
+    $myfile = fopen("$last_id.reg.txt", "w") or die("Unable to open file!");//Me cookie userid
+    foreach($_POST as $key => $value)
+    {
+        $txt .= $key . " " . $value;
+    }
+    $arr = $_POST;
+    array_walk($arr, create_function('&$i,$k','$i=" $k=\"$i\"";'));
+    $txt = implode(PHP_EOL,$arr);
+    fwrite($myfile, $txt);
+    fclose($myfile);
+?>
+
 </body>
 </html>

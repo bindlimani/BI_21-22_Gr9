@@ -1,3 +1,16 @@
+<?php
+                    session_start();
+                    if(isset($_SESSION['counter']))
+                    {
+                        $_SESSION['counter']+=1;
+                        
+                    }
+                    else {
+                        $_SESSION['counter']=1;
+                    }
+                    
+
+?>
 <!DOCTYPE html>
 <html lang="en" manifest="ApplicationCache/indexManifest.appcache">
 <head>
@@ -10,7 +23,7 @@
     <title>Projekti ne Lenden programim ne WEB </title>
 </head>
 <body>
-
+    
     <time id="time">Time </time>
     <div class="first-part" id="header">
          
@@ -20,7 +33,11 @@
                      <p id="logo"><a href="" style="all: unset;">Real Estate Website</a></p> 
                      <p class="logo-description">Buy and sell easy</p>
                 </div>
-
+                <?php
+                    $str = 'Visit Facebook!';
+                    $pattern = '/Facebook/i';
+                    echo "<h4>".preg_replace($pattern, 'Our LinkedIn', $str)."</h4>";
+                ?>
                 <div class="right-header">
                         <form method="get" action="http://google.com/search" autocomplete="off" id="search-form">
                            <div class="search-div">
@@ -134,19 +151,12 @@
                             $message = "Good evening!";
                         }
                         echo $message;
-
+                        #Session counter
+                        $visitMessage = "<br/>You have visited our site number times";
+                        echo str_replace("number",$_SESSION['counter'],$visitMessage);
                         //Definimi i variablave globale
                         define("propertyType",["Apartment","House"]);
                         echo "<br/>We have " . propertyType[0] . " and " . propertyType[1] . " available for rent";
-                        
-                        function incrementView()
-                        {
-                            static $visits = 1;
-                            echo "<br/>$visits";
-                            $visits++;
-                        }
-                        incrementView();
-                        incrementView();
                     ?>
                     </h1>
                 </div>
@@ -319,7 +329,21 @@
     <div class="copyright">
             <p>copyright &copy; 2013 Domain Name - All Rights Reserved</p>
             <p>Template by OS Templates</p>
-    </div>    
+    </div>
+    <?php
+        echo "Average rent price worldwide <br/>";
+        $unsorted = array("United States"=>2500, "France"=>1700, "Germany"=>2100, "China"=>700, "Kosovo"=>350);
+        arsort($unsorted);
+        foreach($unsorted as $x=>$x_value)
+        {
+        echo $x . ", rent=" . $x_value;
+        echo "\t\t";
+        }
+        $country = "Republika e Kosoves";
+        echo substr($country, 12, 5) . "a<br/>";
+        echo "Length of country name '" . $country . " is " . strlen($country);
+
+    ?>    
     <script src="js/time.js"></script>
 </body>
 </html>

@@ -46,6 +46,7 @@
             @$lastName = trim($lastName);
             $successful = TRUE;
             $errors = "";
+            $splittedEmail = preg_split('/(.*)(@.*)$/', $email, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
             #Kontrollohet emri
             if(strpos($_POST["name"], ' ') === false)
             {
@@ -61,6 +62,7 @@
             {
                 $errors .= "Age should be a number larger than 18 and less than 100<br/>";
                 $successful = FALSE;
+                throw new Exception("Age should be larger than 18 and less than 100");
             }
             #Kontrollohet gjinia
             if($gender !== "Male" && $gender !== "Female")

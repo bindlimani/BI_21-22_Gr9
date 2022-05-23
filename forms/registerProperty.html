@@ -12,7 +12,7 @@
     <div style="margin-bottom:100px;"><p> </p></div>
     <div align=center id="main">
         <div id="sub-main">
-                <form  method="POST" action="propertyRegister.php" id="login-form" autocomplete="on">
+                <form  method="POST" enctype="multipart/form-data" action="propertyRegister.php" id="login-form" autocomplete="on">
                     <!-- Emri i perdoruesit me cookie-->
                     <h1>Register a property</h1>
                     <div class="survey-content">
@@ -54,7 +54,7 @@
                             <p style="margin-top: 1rem;">Please write the price:</p>
                             <input type="number" name="price" min="0">
                             <p>Please attach the ownership document:</p>
-                            <input type="file" name="ownershipDoc">
+                            <input type="file" name="file" id="file">
                             <hr/>
                             
                             <input type="submit" name="submit">
