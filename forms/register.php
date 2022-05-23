@@ -26,6 +26,7 @@
     </style>
     <div id="content">
     <?php
+        require __DIR__ . '/regulateInput.php';
         $name = $username = $gender = $email = $password = "";
         print_r($_POST);
         print($_POST["gender"]);
@@ -102,13 +103,7 @@
             }
           }
 
-          function regulate_input($str) {
-            #Perdorimi i trim
-            $str = trim($str);
-            $str = stripslashes($str);
-            $str = htmlspecialchars($str);
-            return $str;
-          }
+          
     
     if($successful)
     {

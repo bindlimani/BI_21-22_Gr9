@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div id="main">
-        <div id="sub-main">                
+    <div style="margin-bottom:100px;"><p> </p></div>
+    <div align=center id="main">
+        <div id="sub-main">
                 <form  method="POST" action="propertyRegister.php" id="login-form" autocomplete="on">
                     <!-- Emri i perdoruesit me cookie-->
                     <h1>Register a property</h1>
@@ -22,13 +23,40 @@
                             <p>Bathrooms:<input type="number" name="bathrooms"></p>
                             <p>Image of property(URL):<input type="url" name="imageURL"></p>
                             <p>Type of property</p>
-                            <input type="radio" name="propertyType" value="House">House
-                            <input type="radio" name="propertyType" value="Flat">Flat
-                            <p>Type of sale</p>
-                            <input type="radio" name="saleType" value="sale">Sale
-                            <input type="radio" name="saleType" value="rent">Rent
+                            <input type="radio" name="propertyType" value="house" id="houseRadio">House
+                            <input type="radio" name="propertyType" value="flat" id="flatRadio">Flat
+
+                            <div class="houseOptions" style="display: none;">
+                                <h2 style="text-align: center; padding-top: 20px;">House options</h2>
+                                <p style="padding-top:20px;">Garden area:</p>
+                                <input type="number" min="1" name="gardenArea">
+                                <p>Number of floors:</p>
+                                <input type="number" min="1" name="numOfFloors">
+                                <p>Has garage</p>
+                                <input type="checkbox" name="hasGarage">
+                                <hr/>
+                            </div>
+
+                           <div class="flatOptions" style="display: none;">
+                                <h2 style="text-align: center; padding-top: 20px;">Flat options</h2>
+                                <p>Floor number</p>
+                                <input type="number" min="0" name="floor">
+                                <p>Has Elevator</p>
+                                <input type="checkbox" name="hasElevator">
+                                <hr/>
+                           </div>
+
+
+
+                            <p style="margin-top: 1rem;">Type of sale</p>
+                            <input type="radio" name="saleType" value="Sale">Sale
+                            <input type="radio" name="saleType" value="Rent">Rent
+                            <p style="margin-top: 1rem;">Please write the price:</p>
+                            <input type="number" name="price" min="0">
                             <p>Please attach the ownership document:</p>
                             <input type="file" name="ownershipDoc">
+                            <hr/>
+                            
                             <input type="submit" name="submit">
                 </div>
                 </form>
@@ -39,5 +67,29 @@
       </div>
 
  </div>
+
+ <script>
+     const house = document.getElementById('houseRadio');
+     const flat = document.getElementById('flatRadio');
+
+
+     const houseDIV = document.querySelector('.houseOptions');
+     const flatDIV = document.querySelector('.flatOptions');
+
+     house.addEventListener('click', () =>{
+         console.log('house radio clicked');
+         houseDIV.style.display = "block";
+         flatDIV.style.display = "none";
+     });
+
+
+     flat.addEventListener('click', () =>{
+         houseDIV.style.display = "none";
+         flatDIV.style.display = "block";
+     })
+
+
+     
+ </script>
 </body>
 </html>
