@@ -1,0 +1,40 @@
+bread and cake=t  ==> juice-sat-cord-ms=t  #SUP: 1869 #CONF: 0.5612612612612613
+bread and cake=t  ==> baking needs=t  #SUP: 2191 #CONF: 0.657957957957958
+bread and cake=t  ==> fruit=t  #SUP: 2325 #CONF: 0.6981981981981982
+milk-cream=t  ==> bread and cake=t  #SUP: 2337 #CONF: 0.7951684246342293
+bread and cake=t  ==> milk-cream=t  #SUP: 2337 #CONF: 0.7018018018018019
+fruit=t  ==> bread and cake=t  #SUP: 2325 #CONF: 0.7849426063470628
+vegetables=t  ==> bread and cake=t  #SUP: 2298 #CONF: 0.7760891590678825
+bread and cake=t  ==> vegetables=t  #SUP: 2298 #CONF: 0.69009009009009
+vegetables=t  ==> fruit=t  #SUP: 2207 #CONF: 0.745356298547788
+fruit=t  ==> vegetables=t  #SUP: 2207 #CONF: 0.7451046590141797
+baking needs=t  ==> bread and cake=t  #SUP: 2191 #CONF: 0.7838998211091235
+baking needs=t  ==> milk-cream=t  #SUP: 1907 #CONF: 0.6822898032200357
+fruit=t  ==> milk-cream=t  #SUP: 2038 #CONF: 0.6880486158001351
+biscuits=t  ==> bread and cake=t  #SUP: 2083 #CONF: 0.799616122840691
+bread and cake=t  ==> frozen foods=t  #SUP: 2129 #CONF: 0.6393393393393393
+frozen foods=t  ==> bread and cake=t  #SUP: 2129 #CONF: 0.7835848362164152
+bread and cake=t  ==> biscuits=t  #SUP: 2083 #CONF: 0.6255255255255255
+milk-cream=t  ==> fruit=t  #SUP: 2038 #CONF: 0.6934331405239877
+vegetables=t  ==> baking needs=t  #SUP: 1949 #CONF: 0.6582235731171902
+vegetables=t  ==> milk-cream=t  #SUP: 2025 #CONF: 0.6838905775075987
+milk-cream=t  ==> vegetables=t  #SUP: 2025 #CONF: 0.6890098673018034
+baking needs=t  ==> vegetables=t  #SUP: 1949 #CONF: 0.6973166368515206
+milk-cream=t  ==> baking needs=t  #SUP: 1907 #CONF: 0.6488601565158217
+baking needs=t  ==> fruit=t  #SUP: 1900 #CONF: 0.6797853309481217
+fruit=t  ==> baking needs=t  #SUP: 1900 #CONF: 0.6414584740040513
+vegetables=t  ==> frozen foods=t  #SUP: 1882 #CONF: 0.6355960824045931
+frozen foods=t  ==> vegetables=t  #SUP: 1882 #CONF: 0.6926757453073242
+juice-sat-cord-ms=t  ==> bread and cake=t  #SUP: 1869 #CONF: 0.758830694275274
+bread and cake=t  ==> margarine=t  #SUP: 1831 #CONF: 0.5498498498498499
+frozen foods=t  ==> baking needs=t  #SUP: 1835 #CONF: 0.6753772543246227
+fruit=t  ==> biscuits=t  #SUP: 1837 #CONF: 0.6201890614449697
+frozen foods=t  ==> fruit=t  #SUP: 1861 #CONF: 0.6849466323150534
+fruit=t  ==> frozen foods=t  #SUP: 1861 #CONF: 0.6282916948008103
+biscuits=t  ==> fruit=t  #SUP: 1837 #CONF: 0.7051823416506718
+baking needs=t  ==> frozen foods=t  #SUP: 1835 #CONF: 0.6565295169946332
+margarine=t  ==> bread and cake=t  #SUP: 1831 #CONF: 0.8002622377622378
+milk-cream=t  ==> frozen foods=t  #SUP: 1826 #CONF: 0.6212997618237496
+frozen foods=t  ==> milk-cream=t  #SUP: 1826 #CONF: 0.6720647773279352
+frozen foods=t  ==> biscuits=t  #SUP: 1810 #CONF: 0.6661759293338241
+biscuits=t  ==> frozen foods=t  #SUP: 1810 #CONF: 0.6948176583493282
